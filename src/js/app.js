@@ -79,6 +79,28 @@
     }
 
 
+    // CARGA DIFERIDA DE IMÁGENES
+    lazy_load_pipo()
+    function lazy_load_pipo(){
+        let imgSRCobserver = lozad('.lozad', {
+            rootMargin: '10px 0px',
+            threshold: 0.5,
+            load: function(el) {
+                el.src = el.getAttribute("data-src");
+                el.onload = function() {
+                    el.style.opacity = '1'
+                    el.style.transition = 'all .5s'
+                }
+            }
+        })
+        let backgroundObserver = lozad('.lozad-background', {
+            rootMargin: '10px 0px',
+            threshold: 0.5
+        })
+        imgSRCobserver.observe()
+        backgroundObserver.observe()
+    }
+
 
 })();
 
