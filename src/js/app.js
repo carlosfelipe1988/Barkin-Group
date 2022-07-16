@@ -99,8 +99,7 @@
         })
         imgSRCobserver.observe()
         backgroundObserver.observe()
-    }
-
+    }   
 
 })();
 

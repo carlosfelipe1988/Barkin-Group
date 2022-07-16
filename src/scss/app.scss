@@ -1003,8 +1003,15 @@ p{
     }
 }
 @media (max-width: 750px){
+    .cont__slider--discover .swiper{
+        overflow: hidden;
+    }
     .footer__description{
         text-align: center;
+    }
+    
+    .container__logos{
+        justify-content: center;
     }
     .footer .logo__compas--rrss{
         display: block;
